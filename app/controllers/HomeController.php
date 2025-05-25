@@ -2,6 +2,7 @@
 
     namespace app\controllers;
     use app\classes\Views as View;
+    use app\classes\Redirect;
     use app\controllers\auth\SessionController as SC;
     class HomeController extends Controller {
 
@@ -10,12 +11,16 @@
         }
 
         public function index($params = null){
+            $auth = SC::sessionValidate();
+            if (!$auth) {
+                Redirect::to('Session/iniSession');
+            }
             $response = [
-                        'ua' => SC::sessionValidate() ?? [ 'sv' => 0 ],
-                        'code'   => 200,
-                        'title'  => 'Foro Fie 2025'
+                        'ua' => $auth ?? ['sv' => 0],
+                        'code' => 200,
+                        'title' => 'Dashboard | PanControl'
                         ];
-            View::render('home',$response);
+            View::render('dashboard/index', $response);
         }
 
     }

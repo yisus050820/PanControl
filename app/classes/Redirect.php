@@ -11,12 +11,11 @@
             $self->location = $location;
 
             //Si las cabeceras ya fueron envíadas
-            if( headers_sent() ){
-                echo '<script type="text/javascript">';
-                echo 'window.location.href="' . URL . $self->location . '"';
+            if( headers_sent() ){            echo '<script type="text/javascript">';
+                echo 'window.location.href="' . BASE_URL . 'public/' . $self->location . '"';
                 echo '</script>';
                 echo '<noscript>';
-                echo '<meta http-equiv="refresh" content="0;url=' .  URL . $self->location . '"';
+                echo '<meta http-equiv="refresh" content="0;url=' . BASE_URL . 'public/' . $self->location . '"';
                 echo '</noscript>';
                 die();
             }

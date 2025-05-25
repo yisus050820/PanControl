@@ -1,0 +1,115 @@
+/* Estilos generales */
+:root {
+    --main: #2563eb;
+    --main-light: #dbeafe;
+    --danger: #dc2626;
+    --bg: #f3f4f6;
+    --text: #1f2937;
+    --white: #ffffff;
+    --gray: #6b7280;
+    --border: #e5e7eb;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg);
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 48px 0 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    background-color: var(--white);
+}
+
+.sidebar .logo {
+    font-size: 1.5rem;
+    color: var(--main);
+    padding: 0 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar nav {
+    padding: 0 1rem;
+}
+
+.sidebar nav a {
+    display: block;
+    padding: .5rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: .375rem;
+    margin-bottom: .5rem;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background-color: var(--main-light);
+    color: var(--main);
+}
+
+/* Main content */
+.main-content {
+    margin-left: 240px; /* Ancho del sidebar */
+    padding: 2rem;
+}
+
+/* Tablas */
+.table {
+    background-color: var(--white);
+    border-radius: .5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: var(--main-light);
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Badges */
+.badge {
+    padding: .35em .65em;
+    font-size: .75em;
+    font-weight: 600;
+    border-radius: .25rem;
+}
+
+/* Botones */
+.btn-primary {
+    background-color: var(--main);
+    border-color: var(--main);
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    border-color: #1d4ed8;
+}
+
+/* Modales */
+.modal-content {
+    border-radius: .5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--border);
+    background-color: var(--main-light);
+}
+
+/* Forms */
+.form-control:focus {
+    border-color: var(--main);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+}
+
+/* Alerts y notificaciones */
+.alert {
+    border-radius: .375rem;
+    border: none;
+}
