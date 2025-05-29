@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard | PanControl</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">PanControl</h2>
+    <nav>
+      <a href="dashboard.html" class="active">🏠 Inicio</a>
+      <a href="inventario.html">📦 Inventario</a>
+      <a href="clientes.html">📋 Clientes y Pedidos</a>
+      <a href="finanzas.html">💰 Finanzas</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="header">
+      <div></div>
+      <div class="user-controls">
+        <span>Usuario</span> | <a href="login.html">Cerrar Sesión</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="title">Panel Resumen</h1>
+
+      <section class="dashboard">
+        <div class="card">
+          <h3>📉 Ingredientes bajos</h3>
+          <ul class="list">
+            <li>Harina <span class="alert">10 kg ⚠️</span></li>
+            <li>Levadura <span class="alert">2 kg ⚠️</span></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>📊 Ganancias del día</h3>
+          <p>Ganancias: <strong>$240</strong></p>
+          <p>Pérdidas: <strong class="danger">$90</strong></p>
+        </div>
+
+        <div class="card">
+          <h3>📈 Ingresos vs Egresos</h3>
+          <div class="bar-chart">
+            <div class="bar" style="height: 40%"></div>
+            <div class="bar" style="height: 60%"></div>
+            <div class="bar" style="height: 80%"></div>
+            <div class="bar" style="height: 50%"></div>
+            <div class="bar" style="height: 70%"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

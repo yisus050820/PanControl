@@ -3,27 +3,23 @@
     function setFooter($args){
         $ua = as_object( $args->ua );
 ?>
-            </div> <!-- /container-fluid -->
-        </div> <!-- /content -->
-    </div> <!-- /wrapper -->
+    <script src="<?=JS?>jquery.js"></script>
+    <script src="<?=JS?>bootstrap.js"></script>
+    <script src="<?=JS?>sweetalert2.js"></script>
+    <script src="<?=JS?>app.js"></script>
 
-    <!-- Scripts -->
-    <script src="<?=BASE_URL?>public/assets/js/jquery.js"></script>
-    <script src="<?=BASE_URL?>public/assets/js/bootstrap.js"></script>
-    <script src="<?=BASE_URL?>public/assets/js/sweetalert2.js"></script>
-    <script src="<?=BASE_URL?>public/assets/js/app.js"></script>
-    
     <script>
-        $(document).ready(function () {
-            // Toggle sidebar
-            $('#sidebarCollapse').on('click', function () {
-                $('#sidebar').toggleClass('active');
-            });
-        });
+        $( function(){
+            app.user.sv       =  <?= $ua->sv?'true':'false'?>;
+            app.user.id       = "<?=$ua->id??''?>"
+            app.user.username = "<?=$ua->username??''?>"
+            app.user.tipo     = "<?=$ua->tipo??''?>"
+
+        })
     </script>
 <?php
     }
     function closeFooter(){?>
-</body>
-</html>
-<?php }
+        </body>
+        </html>
+    <?php }

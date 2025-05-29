@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inventario | PanControl</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">PanControl</h2>
+    <nav>
+      <a href="dashboard.html">🏠 Inicio</a>
+      <a href="#" class="active">📦 Inventario</a>
+      <a href="clientes.html">📋 Clientes y Pedidos</a>
+      <a href="finanzas.html">💰 Finanzas</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="header">
+      <div></div>
+      <div class="user-controls">
+        <span>Usuario</span> | <a href="login.html">Cerrar Sesión</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="title">Inventario</h1>
+
+      <div class="actions">
+        <button class="btn">➕ Agregar Ingrediente</button>
+        <br>
+        <br>
+      </div>
+
+      <section class="dashboard">
+        <div class="card" style="grid-column: span 3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Ingrediente</th>
+                <th>Cantidad</th>
+                <th>Unidad</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ana Gómez</td>
+                <td>Harina</td>
+                <td>10</td>
+                <td>kg</td>
+                <td class="alert">Bajo</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Juan Pérez</td>
+                <td>Levadura</td>
+                <td>2</td>
+                <td>kg</td>
+                <td class="alert">Crítico</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Lucía Rivera</td>
+                <td>Queso</td>
+                <td>5</td>
+                <td>kg</td>
+                <td>OK</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

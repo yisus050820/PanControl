@@ -7,7 +7,9 @@
 
     //** Debugueo */
     error_reporting(E_ALL);
-    ini_set('display_errors',1);    class App {
+    ini_set('display_errors',1);
+
+    class App {
 
         public function __construct(){
             $this->init();
@@ -15,7 +17,6 @@
 
         private function init(){
             $this->initConfig();
-            require_once __DIR__ . '/init.php';
             $this->loadFunctions();
             $this->initAutoloader();
             
@@ -56,10 +57,6 @@
             $router->route();
         }
 
-        private function initSession() {
-            require_once __DIR__ . '/init.php';
-            return;
-        }
       
         public static function run(){
             $app = new self();

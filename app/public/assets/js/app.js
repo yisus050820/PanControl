@@ -1,11 +1,15 @@
 const app = {
     routes : {
-        home          : BASE_URL + 'public/',
-        inisession    : BASE_URL + "public/Session/inisession",
-        login         : BASE_URL + "public/Session/userAuth",
-        inventory     : BASE_URL + "public/Inventory",
-        orders        : BASE_URL + "public/Orders",
-        finance       : BASE_URL + "public/Finance",
+        home          : '/home',
+        inisession    : "/Session/inisession",
+        login         : "/Session/userAuth",
+        register      : "/Register/register",
+        prevposts     : '/Posts/getPosts',
+        lastpost      : '/Posts/getLastPost',
+        openpost      : '/Posts/openPost',
+        togglecomments: '/Posts/getComments',
+        togglelike    : '/Posts/toggleLike',
+        savecomment   : '/Posts/saveComment',
     },
     user : {
         sv      : false,

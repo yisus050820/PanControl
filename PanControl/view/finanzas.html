@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finanzas | PanControl</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">PanControl</h2>
+    <nav>
+      <a href="dashboard.html">🏠 Inicio</a>
+      <a href="inventario.html">📦 Inventario</a>
+      <a href="clientes.html">📋 Clientes y Pedidos</a>
+      <a href="finanzas.html" class="active">💰 Finanzas</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="header">
+      <div></div>
+      <div class="user-controls">
+        <span>Usuario</span> | <a href="login.html">Cerrar Sesión</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="title">Resumen Financiero</h1>
+
+      <section class="dashboard">
+        <div class="card">
+          <h3>💵 Ingresos del mes</h3>
+          <p><strong>$8,500</strong></p>
+        </div>
+
+        <div class="card">
+          <h3>📤 Egresos del mes</h3>
+          <p class="danger"><strong>$3,200</strong></p>
+        </div>
+
+        <div class="card">
+          <h3>📈 Ganancia neta</h3>
+          <p><strong>$5,300</strong></p>
+        </div>
+
+        <div class="card" style="grid-column: span 3">
+          <h3>📊 Ingresos vs Egresos (últimos 5 meses)</h3>
+          <div class="bar-graph">
+            <div class="bar-group">
+              <div class="bar ingreso" style="height: 80%"></div>
+              <div class="bar egreso" style="height: 40%"></div>
+              <span>Ene</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar ingreso" style="height: 90%"></div>
+              <div class="bar egreso" style="height: 50%"></div>
+              <span>Feb</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar ingreso" style="height: 70%"></div>
+              <div class="bar egreso" style="height: 30%"></div>
+              <span>Mar</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar ingreso" style="height: 85%"></div>
+              <div class="bar egreso" style="height: 45%"></div>
+              <span>Abr</span>
+            </div>
+            <div class="bar-group">
+              <div class="bar ingreso" style="height: 95%"></div>
+              <div class="bar egreso" style="height: 60%"></div>
+              <span>May</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

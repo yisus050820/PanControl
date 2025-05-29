@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Clientes y Pedidos | PanControl</title>
+  <link rel="stylesheet" href="/public/css/dashboard.css">
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2 class="logo">PanControl</h2>
+    <nav>
+      <a href="dashboard.html">🏠 Inicio</a>
+      <a href="inventario.html">📦 Inventario</a>
+      <a href="clientes.html" class="active">📋 Clientes y Pedidos</a>
+      <a href="finanzas.html">💰 Finanzas</a>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <header class="header">
+      <div></div>
+      <div class="user-controls">
+        <span>Usuario</span> | <a href="login.html">Cerrar Sesión</a>
+      </div>
+    </header>
+
+    <main class="content">
+      <h1 class="title">Clientes y Pedidos</h1>
+
+      <!-- Botón crear pedido -->
+      <div class="actions">
+        <button class="btn">➕ Crear Pedido</button>
+      </div>
+
+      <section class="dashboard">
+        <!-- Tabla de pedidos -->
+        <div class="card" style="grid-column: span 3">
+          <h3>📋 Pedidos recientes</h3>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ana Gómez</td>
+                <td>20/05/2025</td>
+                <td>Enviado</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Juan Pérez</td>
+                <td>20/05/2025</td>
+                <td>Pendiente</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Lucía Rivera</td>
+                <td>19/05/2025</td>
+                <td>Entregado</td>
+                <td>
+                  <button class="btn small">✏️ Editar</button>
+                  <button class="btn small danger">🗑️ Eliminar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Lista general de clientes -->
+        <div class="card" style="grid-column: span 3">
+          <h3>🧾 Clientes registrados</h3>
+
+          <div class="client-list">
+            <div class="client-card">
+              <p><strong>Nombre:</strong> Ana Gómez</p>
+              <p><strong>Estatus:</strong> Pedido pendiente</p>
+              <button class="btn small">📜 Ver historial</button>
+            </div>
+            <div class="client-card">
+              <p><strong>Nombre:</strong> Juan Pérez</p>
+              <p><strong>Estatus:</strong> Sin pedidos activos</p>
+              <button class="btn small">📜 Ver historial</button>
+            </div>
+            <div class="client-card">
+              <p><strong>Nombre:</strong> Lucía Rivera</p>
+              <p><strong>Estatus:</strong> Pedido entregado</p>
+              <button class="btn small">📜 Ver historial</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
