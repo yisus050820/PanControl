@@ -38,17 +38,25 @@
             $this->uri = explode('/',ucfirst(strtolower( $this->uri )));
             return;
            }
-        }
-
-        private function getController(){
+        }        private function getController(){
             $controller = 'Home';
             if( isset( $this->uri[0]) ){
                 $controller = $this->uri[0];
                 unset($this->uri[0]);
             }
             $controller = ucfirst( $controller );
+            
+            // Rutas de autenticación
             if( $controller == 'Session' ) $controller = "auth\\Session";
             if( $controller == 'Register' ) $controller = "auth\\Register";
+            
+            // Rutas de PanControl
+            if( $controller == 'Pancontrol' ) {
+                $subController = isset($this->uri[1]) ? ucfirst($this->uri[1]) : 'Dashboard';
+                unset($this->uri[1]);
+                $controller = "pancontrol\\{$subController}";
+            }
+            
             $controller = 'app\controllers\\' . $controller . 'Controller';
             return $controller;
 

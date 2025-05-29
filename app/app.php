@@ -21,13 +21,16 @@
             $this->initAutoloader();
             
             $this->initRouter();
-        }
-
-        private function initConfig(){
+        }        private function initConfig(){
             if(!file_exists(__DIR__ . "/config.php")){
                 die("No se encontró el archivo de configuración config.php");
             }
             require_once __DIR__ . '/config.php';
+            
+            // Cargar configuración de PanControl
+            if(file_exists(__DIR__ . "/pancontrol_config.php")){
+                require_once __DIR__ . '/pancontrol_config.php';
+            }
             return;
         }
 
